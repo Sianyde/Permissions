@@ -14,7 +14,7 @@
                 <tr ng-repeat="row in permissions">
                     <th scope="row">{{row.section}}</th>
                     <td>
-                        <label><input type="checkbox" ng-change="checkedAction(row.section, 'View')" ng-model="row.permission.View"> <span>View</label>
+                        <label><input type="checkbox" ng-change="checkedAction(row.section, 'View')" ng-model="row.permission.View"> <span>View</span></label>
                     </td>
                     <td>
                         <label><input type="checkbox" ng-change="checkedAction(row.section, 'Edit')" ng-model="row.permission.Edit" ng-disabled="!row.permission.View"> <span>Edit</span></label>
