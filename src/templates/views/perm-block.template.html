@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="table-container">
+        <h3 class="table-title">Permission</h3>
+        <table class="table perms-table">
+            <thead>
+            <tr>
+                <th scope="col">Sections</th>
+                <th scope="col"><label><input ng-model="allView" ng-change="checkAll('View')" type="checkbox"> Check all<span> - View</span></label></th>
+                <th scope="col"><label><input ng-model="allEdit" ng-disabled="editDisable" ng-change="checkAll('Edit')" type="checkbox"> Check all<span> - Edit</span></label></th>
+                <th scope="col"><label><input ng-model="allRemove" ng-disabled="removeDisable" ng-change="checkAll('Remove')" type="checkbox"> Check all<span> - Remove</span></label></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in permissions">
+                    <th scope="row">{{row.section}}</th>
+                    <td>
+                        <label><input type="checkbox" ng-change="checkedAction(row.section, 'View')" ng-model="row.permission.View"> <span>View</label>
+                    </td>
+                    <td>
+                        <label><input type="checkbox" ng-change="checkedAction(row.section, 'Edit')" ng-model="row.permission.Edit" ng-disabled="!row.permission.View"> <span>Edit</span></label>
+                    </td>
+                    <td>
+                        <label><input type="checkbox" ng-change="checkedAction(row.section, 'Remove')" ng-model="row.permission.Remove" ng-disabled="!row.permission.Edit"> <span>Remove</span></label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-block text-right">
+            <button type="button" class="btn btn-primary btn-save" ng-click="saveData()">Save</button>
+        </div>
+    </div>
+</div>

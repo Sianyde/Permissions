@@ -1,0 +1,6 @@
+[
+  {"section": "Calendar", "permission": { "View": true, "Edit": true, "Remove": false }},
+  {"section": "Profile", "permission": { "View": true, "Edit": true, "Remove": false }},
+  {"section": "Property", "permission": { "View": true, "Edit": true, "Remove": false }},
+  {"section": "Contacts", "permission": { "View": true, "Edit": true, "Remove": false }}
+]

@@ -1,0 +1,50 @@
+.table-container
+    max-width: 968px
+    margin: 100px auto
+    border: 1px solid black
+    padding: 30px 60px
+
+.table
+    thead th
+        border: 0
+    tbody th
+        font-weight: normal
+    label
+        margin: 0
+        cursor: pointer
+
+.table-title
+    margin-bottom: 30px
+
+.table
+    td, th
+        padding: .75rem
+        vertical-align: top
+        border-top: 1px dashed #000000
+.perms-table
+    thead label span
+        display: none
+.btn-save
+    padding: 7px 30px
+
+@media (max-width: 767px)
+    .table-container
+        margin: 20px auto
+        padding: 10px
+
+@media (max-width: 500px)
+    .table
+        td, th
+            padding: 0.3rem
+    .perms-table
+        thead, tbody, th, td, tr
+            display: block
+    .perms-table
+        td
+            border: 0
+    .perms-table
+        tbody th
+            font-weight: bold
+    .perms-table
+        thead label span
+            display: inline
